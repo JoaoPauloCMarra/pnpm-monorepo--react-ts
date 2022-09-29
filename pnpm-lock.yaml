@@ -43,6 +43,7 @@ importers:
       recoil: ^0.7.5
       rimraf: ^3.0.2
       styled-components: ^5.3.6
+      styled-normalize: ^8.0.7
       ts-jest: ^29.0.3
       ts-node: ^10.9.1
       typescript: ^4.8.4
@@ -57,6 +58,7 @@ importers:
       react-router-dom: 6.4.1_biqbaboplfbrettd7655fr4n2y
       recoil: 0.7.5_biqbaboplfbrettd7655fr4n2y
       styled-components: 5.3.6_7i5myeigehqah43i5u7wbekgba
+      styled-normalize: 8.0.7_styled-components@5.3.6
       ui-library: link:packages/ui-library
     devDependencies:
       '@jest/types': 29.1.0
@@ -4687,6 +4689,14 @@ packages:
       react-is: 18.2.0
       shallowequal: 1.1.0
       supports-color: 5.5.0
+
+  /styled-normalize/8.0.7_styled-components@5.3.6:
+    resolution: {integrity: sha512-qQV4O7B9g7ZUnStCwGde7Dc/mcFF/pz0Ha/LL7+j/r6uopf6kJCmmR7jCPQMCBrDkYiQ4xvw1hUoceVJkdaMuQ==}
+    peerDependencies:
+      styled-components: ^4.0.0 || ^5.0.0
+    dependencies:
+      styled-components: 5.3.6_7i5myeigehqah43i5u7wbekgba
+    dev: false
 
   /supports-color/5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
