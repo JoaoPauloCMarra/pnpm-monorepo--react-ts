@@ -7,6 +7,6 @@
     "tsBuildInfoFile": "./dist/.tsbuildinfo"
   },
 
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["../../types.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "dist"]
 }

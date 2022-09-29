@@ -1,24 +1,46 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.button<{ active?: boolean }>`
-  background: black;
-  border: 2px solid black;
-  border-radius: 0.4rem;
-  color: white;
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  transition: none 150ms linear;
-  transition-property: background-color, border-color, color;
+import { Props } from './Button';
 
-  ${({ active }) =>
-    active &&
+export const Container = styled.button<Partial<Props>>`
+  ${({ bg, border, color, active, activeBg, activeBorder, activeColor, size }) => css`
+    background: var(--colors-${bg}, black);
+    border: 2px solid var(--colors-${border || bg}, black);
+    border-radius: 0.4rem;
+    color: var(--colors-${color}, white);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: none 200ms linear;
+    transition-property: background-color, border-color, color;
+
+    ${active &&
     css`
-      background: white;
-      border-color: black;
-      color: black;
+      background: var(--colors-${activeBg || color}, white);
+      border-color: var(--colors-${activeBorder || activeBg || bg}, black);
+      color: var(--colors-${activeColor || bg}, black);
       cursor: default;
     `}
+
+    ${size === 'sm' &&
+    css`
+      font-size: 0.875rem;
+      padding: 0.25rem 0.5rem;
+    `}
+    ${size === 'lg' &&
+    css`
+      font-size: 1.2rem;
+      padding: 0.8rem 1.4rem;
+    `}
+  `}
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  &:not(:disabled):active {
+    opacity: 0.8;
+  }
 `;
 
 export const GroupedButtons = styled.div`

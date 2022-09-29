@@ -2,8 +2,16 @@ import { FC, MouseEventHandler, PropsWithChildren } from 'react';
 
 import { Container } from './styles';
 
-interface Props extends PropsWithChildren {
+export interface Props extends PropsWithChildren {
+  disabled?: boolean;
   active?: boolean;
+  activeBg?: string;
+  activeBorder?: string;
+  activeColor?: string;
+  bg?: string;
+  border?: string;
+  color?: string;
+  size?: Sizes;
   'data-testid'?: string;
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
