@@ -10,14 +10,9 @@ export const logError = (title: string, message?: string) => {
   console.error('\n');
 };
 
-interface ApiGetParams {
-  route: string;
-  mock?: unknown;
-}
-
-export const apiGet = async ({ route, mock }: ApiGetParams) => {
+export const apiGet = async <T>({ route, mock }: { route: string; mock?: T }) => {
   if (process.env.NODE_ENV === 'test') {
-    return mock;
+    return mock as T;
   }
 
   const response = await fetch(`https://joaopaulocmarra.npkn.net/sandbox${route}`);
@@ -26,5 +21,5 @@ export const apiGet = async ({ route, mock }: ApiGetParams) => {
     throw new Error(`${response.status}: ${response.statusText}`);
   }
 
-  return await response.json();
+  return (await response.json()) as T;
 };

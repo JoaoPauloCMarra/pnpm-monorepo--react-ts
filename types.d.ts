@@ -6,6 +6,7 @@ interface Window {
 declare type UserInfo = {
   username: string;
   email: string;
+  language: string;
 };
 
 declare type Sizes = 'sm' | 'md' | 'lg';

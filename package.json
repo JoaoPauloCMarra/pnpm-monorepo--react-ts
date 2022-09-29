@@ -19,8 +19,8 @@
     "web:dev": "pnpm --filter web dev",
     "web:build": "pnpm --filter web build",
     "web:preview": "pnpm --filter web preview",
-    "build:all": "npm run utils:build && npm run ui-library:build && npm run web:build",
-    "ci": "npm run prettier && npm run lint && npm run test:all && npm run build:all"
+    "build:all": "pnpm utils:build && pnpm ui-library:build && pnpm web:build",
+    "ci": "pnpm prettier && pnpm lint && pnpm test:all && pnpm build:all"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.7.2",

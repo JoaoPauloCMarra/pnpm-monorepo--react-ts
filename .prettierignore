@@ -1,5 +1,6 @@
 .vscode
 .husky
+node_modules
 pnpm-lock.yaml
 
 apps/web/dist

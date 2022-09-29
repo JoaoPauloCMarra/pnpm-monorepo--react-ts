@@ -35,12 +35,12 @@ class ErrorBoundary extends Component<Props, State> {
     logError('A ErrorBoundary report:', `${String(error)} - ${String(errorInfo)}`);
   }
 
-  onRetryClick() {
+  onRetryClick = () => {
     if (this.props.onRetry) {
       this.props.onRetry();
     }
     this.setState({ hasError: false, message: '' });
-  }
+  };
 
   public render() {
     if (this.state.hasError) {

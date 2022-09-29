@@ -19,8 +19,8 @@
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:import/typescript",
@@ -35,7 +35,8 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "warnOnUnsupportedTypeScriptVersion": true
+    "warnOnUnsupportedTypeScriptVersion": true,
+    "project": ["tsconfig.json", "tsconfig.test.json", "apps/*/tsconfig.json", "packages/*/tsconfig.json"]
   },
   "settings": {
     "react": {
@@ -46,8 +47,7 @@
     },
     "import/resolver": {
       "typescript": {
-        "alwaysTryTypes": true,
-        "project": ["./tsconfig.json", "apps/*/tsconfig.json", "packages/*/tsconfig.json"]
+        "alwaysTryTypes": true
       }
     }
   },
@@ -84,8 +84,14 @@
     "prefer-const": "error",
 
     // TypeScript specific rules
-    "@typescript-eslint/consistent-type-assertions": "warn",
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-misused-promises": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/consistent-type-assertions": "warn",
     "@typescript-eslint/no-redeclare": "warn",
     "@typescript-eslint/no-use-before-define": [
       "warn",
