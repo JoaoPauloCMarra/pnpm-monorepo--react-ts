@@ -1,0 +1,10 @@
+.vscode
+.husky
+pnpm-lock.yaml
+
+apps/web/dist
+apps/web/public
+
+packages/ui-library/dist
+
+packages/utils/dist

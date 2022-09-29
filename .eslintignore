@@ -1,0 +1,9 @@
+.vscode
+.husky
+
+apps/web/dist
+apps/web/public
+
+packages/ui-library/dist
+
+packages/utils/dist
