@@ -2,9 +2,9 @@
 
 ### Apps
 
-* web - React 18 + Vite + TS
+- web - React 18 + Vite + TS
 
 ### Packages
 
-* ui-library - react components with TS
-* utils - TS utilities
+- ui-library - react components with TS
+- utils - TS utilities
