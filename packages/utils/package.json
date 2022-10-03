@@ -2,8 +2,5 @@
   "name": "utils",
   "version": "1.0.0",
   "private": true,
-  "sideEffects": false,
-  "scripts": {
-    "build": "rimraf ./dist && tsc"
-  }
+  "sideEffects": false
 }

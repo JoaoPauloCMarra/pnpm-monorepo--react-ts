@@ -10,6 +10,7 @@ export const Container = styled.button<Partial<Props>>`
     color: var(--colors-${color}, white);
     cursor: pointer;
     font-size: 1rem;
+    font-weight: normal;
     padding: 0.5rem 1rem;
     transition: none 200ms linear;
     transition-property: background-color, border-color, color;
@@ -20,6 +21,7 @@ export const Container = styled.button<Partial<Props>>`
       border-color: var(--colors-${activeBorder || activeBg || bg}, black);
       color: var(--colors-${activeColor || bg}, black);
       cursor: default;
+      font-weight: bold;
     `}
 
     ${size === 'sm' &&

@@ -18,7 +18,9 @@ export const apiGet = async <T>({ route, mock }: { route: string; mock?: T }) =>
   const response = await fetch(`https://joaopaulocmarra.npkn.net/sandbox${route}`);
 
   if (!response.ok) {
-    throw new Error(`${response.status}: ${response.statusText}`);
+    const message = `${response.status}: ${response.statusText}`;
+    logError('utils-apiGet Error:', message);
+    throw new Error(message);
   }
 
   return (await response.json()) as T;
