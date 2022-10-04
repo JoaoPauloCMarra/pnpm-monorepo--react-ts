@@ -1,0 +1,11 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "dev": "vite",
+    "preview": "node ../../dist/server/main.mjs",
+    "build": "rimraf ../../dist/server && tsc && vite build"
+  }
+}

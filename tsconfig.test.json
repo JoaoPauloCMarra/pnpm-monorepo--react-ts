@@ -2,5 +2,5 @@
   "extends": "./tsconfig.base.json",
 
   "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", ".husky", ".vscode"]
+  "exclude": ["node_modules", ".husky", ".vscode", "dist"]
 }

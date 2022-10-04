@@ -1,4 +1,9 @@
 {
   "files": [],
-  "references": [{ "path": "apps/web" }, { "path": "packages/ui-library" }, { "path": "packages/utils" }]
+  "references": [
+    { "path": "apps/server" },
+    { "path": "apps/web" },
+    { "path": "packages/ui-library" },
+    { "path": "packages/utils" }
+  ]
 }

@@ -10,12 +10,12 @@ export const logError = (title: string, message?: string) => {
   console.error('\n');
 };
 
-export const apiGet = async <T>({ route, mock }: { route: string; mock?: T }) => {
+export const apiGet = async <T>({ route, mock, baseUrl }: { route: string; mock?: T; baseUrl?: string }) => {
   if (process.env.NODE_ENV === 'test') {
     return mock as T;
   }
 
-  const response = await fetch(`https://joaopaulocmarra.npkn.net/sandbox${route}`);
+  const response = await fetch(`${baseUrl || 'http://localhost:3000'}${route}`);
 
   if (!response.ok) {
     const message = `${response.status}: ${response.statusText}`;
