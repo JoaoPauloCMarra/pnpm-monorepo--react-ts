@@ -2,7 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { MOCK_USER_INFO } from './mocks';
+import MOCK from './MOCK';
 
 describe('AppController', () => {
   let appController: AppController;
@@ -16,9 +16,21 @@ describe('AppController', () => {
     appController = app.get<AppController>(AppController);
   });
 
-  describe('root', () => {
-    it('should return UserInfo JSON', () => {
-      expect(appController.getUserData()).toStrictEqual(MOCK_USER_INFO);
+  describe('API', () => {
+    it('root should return a text', () => {
+      expect(appController.getIndexInfo()).toStrictEqual('Api Working');
+    });
+
+    it('GET /me should return UserInfo JSON', () => {
+      expect(appController.getUserData()).toStrictEqual(MOCK.user);
+    });
+
+    it('POST /user-language should return prev and next language', () => {
+      const nextLanguage = 'en';
+      expect(appController.saveUserLanguage({ language: nextLanguage })).toStrictEqual({
+        prevLanguage: 'es',
+        nextLanguage,
+      });
     });
   });
 });

@@ -13,7 +13,7 @@ export const Container = styled.button<Partial<Props>>`
     font-weight: normal;
     padding: 0.5rem 1rem;
     transition: none 200ms linear;
-    transition-property: background-color, border-color, color;
+    transition-property: background-color, border-color, color, opacity;
 
     ${active &&
     css`

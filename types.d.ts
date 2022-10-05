@@ -3,6 +3,8 @@ interface Window {
   __REACT_DEVTOOLS_GLOBAL_HOOK__: any;
 }
 
+declare type RestMethods = 'GET' | 'POST' | 'PUT' | 'DELETE';
+
 declare type UserInfo = {
   username: string;
   email: string;

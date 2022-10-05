@@ -1,10 +1,11 @@
 import { INestApplication, NestApplicationOptions, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
+import { NestExpressApplication } from '@nestjs/platform-express';
 
 import { AppModule } from './app.module';
 
 export async function createApp(options?: NestApplicationOptions): Promise<INestApplication> {
-  const app = await NestFactory.create(AppModule, options);
+  const app = await NestFactory.create<NestExpressApplication>(AppModule, options);
   app.enableCors();
   app.useGlobalPipes(
     new ValidationPipe({

@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 
 import { AppService } from './app.service';
 
@@ -7,17 +7,17 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getIndexInfo(): string {
+  getIndexInfo() {
     return 'Api Working';
   }
 
   @Get('/me')
-  getUserData(): UserInfo {
+  getUserData() {
     return this.appService.getUserData();
   }
 
-  @Get('/random')
-  getRandom(): string {
-    return Math.random().toString();
+  @Post('/user-language')
+  saveUserLanguage(@Body() body: { language: string }) {
+    return this.appService.saveUserLanguage(body.language);
   }
 }

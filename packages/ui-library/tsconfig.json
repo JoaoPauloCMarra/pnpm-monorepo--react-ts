@@ -3,8 +3,11 @@
   "compilerOptions": {
     "composite": true,
     "rootDir": ".",
-    "outDir": "./dist",
-    "tsBuildInfoFile": "./dist/.tsbuildinfo"
+    "noEmit": true
+  },
+  "ts-node": {
+    "swc": true,
+    "transpileOnly": true
   },
 
   "include": ["../../types.d.ts", "**/*.ts", "**/*.tsx"],

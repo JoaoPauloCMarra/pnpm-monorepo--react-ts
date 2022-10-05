@@ -2,7 +2,7 @@
 
 import { cleanup } from '@testing-library/react';
 
-import { apiGet, logError } from '.';
+import { apiCall, logError } from '.';
 
 describe('Utils Package', () => {
   afterEach(cleanup);
@@ -15,10 +15,48 @@ describe('Utils Package', () => {
     expect(console.error).toBeCalledTimes(2);
   });
 
-  it('apiGet works as expected', async () => {
+  it('GET apiCall works as expected', async () => {
     const mock = 'worked';
-    const response = await apiGet<string>({
+    const response = await apiCall<string>({
+      method: 'GET',
       route: '/jest',
+      mock,
+    });
+
+    expect(response).toBe(mock);
+  });
+
+  it('POST apiCall works as expected', async () => {
+    const mock = 'worked';
+    const data = { test: true };
+    const response = await apiCall<string, { test: boolean }>({
+      method: 'POST',
+      route: '/jest',
+      data,
+      mock,
+    });
+
+    expect(response).toBe(mock);
+  });
+
+  it('PUT apiCall works as expected', async () => {
+    const mock = 'worked';
+    const data = { test: false };
+    const response = await apiCall<string, { test: boolean }>({
+      method: 'PUT',
+      route: '/jest/1',
+      data,
+      mock,
+    });
+
+    expect(response).toBe(mock);
+  });
+
+  it('DELETE apiCall works as expected', async () => {
+    const mock = 'worked';
+    const response = await apiCall<string>({
+      method: 'DELETE',
+      route: '/jest/1',
       mock,
     });
 
