@@ -4,12 +4,12 @@ import { VitePluginNode } from 'vite-plugin-node';
 export default defineConfig({
   server: {
     port: 3000,
-    open: true,
+    open: false,
     cors: true,
   },
   preview: {
     port: 3001,
-    open: true,
+    open: false,
     cors: true,
   },
   build: {
