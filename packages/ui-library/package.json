@@ -2,5 +2,9 @@
   "name": "ui-library",
   "version": "1.0.0",
   "private": true,
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
 }
