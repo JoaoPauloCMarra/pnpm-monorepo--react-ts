@@ -4,6 +4,9 @@ import Button from '../Button';
 
 export default {
   title: 'Button',
+  parameters: {
+    layout: 'fullscreen',
+  },
   argTypes: {
     children: {
       control: { type: 'text' },
@@ -39,7 +42,6 @@ export default {
   },
 } as ComponentMeta<typeof Button>;
 
-//👇 We create a “template” of how args map to rendering
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
