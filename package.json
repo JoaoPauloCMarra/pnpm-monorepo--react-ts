@@ -5,6 +5,10 @@
   "keywords": [],
   "author": "JoaoPauloCMarra",
   "license": "ISC",
+  "repository": {
+    "url": "https://github.com/JoaoPauloCMarra/pnpm-monorepo--react-ts",
+    "type": "Boilerplate"
+  },
   "scripts": {
     "preinstall": "npx -y only-allow pnpm",
     "prepare": "husky install",
@@ -24,8 +28,12 @@
     "storybook:build": "pnpm --filter ui-library build-storybook",
     "storybook:preview": "npx -y http-server ./dist/ui-library-storybook --cors",
     "dev": "npm-run-all -l -p server:dev web:dev",
+    "preview": "npm-run-all -l -p server:preview web:preview",
     "build": "npm-run-all -l -s server:build web:build storybook:build",
-    "ci": "npm-run-all -l -s typecheck format lint test:all server:build web:build storybook:build"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run && cypress run --component",
+    "e2e": "start-server-and-test dev http://127.0.0.1:8000 cypress:run",
+    "ci": "npm-run-all -l -s typecheck format lint test:all server:build web:build storybook:build e2e"
   },
   "dependencies": {
     "@nestjs/common": "^9.1.4",
@@ -81,6 +89,7 @@
     "babel-plugin-styled-components": "^2.0.7",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
+    "cypress": "^10.9.0",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.5.1",
@@ -101,6 +110,7 @@
     "react-docgen-typescript": "^2.2.2",
     "react-is": "^18.2.0",
     "rimraf": "^3.0.2",
+    "start-server-and-test": "^1.14.0",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.4",

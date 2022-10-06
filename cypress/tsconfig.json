@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "rootDir": ".",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "types": ["cypress", "node"]
+  },
+  "ts-node": {
+    "swc": true,
+    "transpileOnly": true
+  },
+
+  "include": ["../types.d.ts", "**/*.ts", "**/*.tsx"]
+}
