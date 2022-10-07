@@ -5,11 +5,13 @@ export default defineConfig({
   server: {
     port: 3000,
     open: false,
+    host: true,
     cors: true,
   },
   preview: {
     port: 3001,
     open: false,
+    host: true,
     cors: true,
   },
   build: {

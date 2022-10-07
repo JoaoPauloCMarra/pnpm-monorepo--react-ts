@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.base.json",
 
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", ".husky", ".vscode", "dist"]
+  "include": ["./types.d.ts", "apps/**/*.ts", "apps/**/*.tsx", "packages/**/*.ts", "packages/**/*.tsx"],
+  "exclude": ["node_modules", ".husky", ".vscode", "dist", "cypress"]
 }

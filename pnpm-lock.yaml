@@ -6435,7 +6435,7 @@ packages:
     hasBin: true
     dependencies:
       browserslist: 4.21.4
-      caniuse-lite: 1.0.30001416
+      caniuse-lite: 1.0.30001418
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       picocolors: 0.2.1
@@ -6933,8 +6933,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001416
-      electron-to-chromium: 1.4.274
+      caniuse-lite: 1.0.30001418
+      electron-to-chromium: 1.4.275
       node-releases: 2.0.6
       update-browserslist-db: 1.0.10_browserslist@4.21.4
     dev: true
@@ -7137,8 +7137,8 @@ packages:
   /camelize/1.0.0:
     resolution: {integrity: sha512-W2lPwkBkMZwFlPCXhIlYgxu+7gC/NUlCtdK652DAJ1JdgV0sTrvuPFshNPrFa1TY2JOkLhgdeEBplB4ezEa+xg==}
 
-  /caniuse-lite/1.0.30001416:
-    resolution: {integrity: sha512-06wzzdAkCPZO+Qm4e/eNghZBDfVNDsCgw33T27OwBH9unE9S478OYw//Q2L7Npf/zBzs7rjZOszIFQkwQKAEqA==}
+  /caniuse-lite/1.0.30001418:
+    resolution: {integrity: sha512-oIs7+JL3K9JRQ3jPZjlH6qyYDp+nBTCais7hjh0s+fuBwufc7uZ7hPYMXrDOJhV360KGMTcczMRObk0/iMqZRg==}
     dev: true
 
   /capture-exit/2.0.0:
@@ -8321,8 +8321,8 @@ packages:
       jake: 10.8.5
     dev: true
 
-  /electron-to-chromium/1.4.274:
-    resolution: {integrity: sha512-Fgn7JZQzq85I81FpKUNxVLAzoghy8JZJ4NIue+YfUYBbu1AkpgzFvNwzF/ZNZH9ElkmJD0TSWu1F2gTpw/zZlg==}
+  /electron-to-chromium/1.4.275:
+    resolution: {integrity: sha512-aJeQQ+Hl9Jyyzv4chBqYJwmVRY46N5i2BEX5Cuyk/5gFCUZ5F3i7Hnba6snZftWla7Gglwc5pIgcd+E7cW+rPg==}
     dev: true
 
   /elliptic/6.5.4:
