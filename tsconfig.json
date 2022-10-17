@@ -1,9 +1,10 @@
 {
-  "files": [],
+  "files": ["cypress.config.ts", "jest.config.ts", "jest.setup.ts"],
   "references": [
     { "path": "apps/server" },
     { "path": "apps/web" },
     { "path": "packages/ui-library" },
-    { "path": "packages/utils" }
+    { "path": "packages/utils" },
+    { "path": "cypress" }
   ]
 }

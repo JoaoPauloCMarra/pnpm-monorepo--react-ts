@@ -4,7 +4,6 @@
     "composite": true,
     "baseUrl": ".",
     "rootDir": ".",
-    "noEmit": true,
     "jsx": "react-jsx",
     "types": ["cypress", "node"]
   },

@@ -36,7 +36,13 @@
       "jsx": true
     },
     "warnOnUnsupportedTypeScriptVersion": true,
-    "project": ["tsconfig.json", "tsconfig.test.json", "apps/*/tsconfig.json", "packages/*/tsconfig.json"]
+    "project": [
+      "tsconfig.json",
+      "tsconfig.test.json",
+      "cypress/tsconfig.json",
+      "apps/*/tsconfig.json",
+      "packages/*/tsconfig.json"
+    ]
   },
   "settings": {
     "react": {
