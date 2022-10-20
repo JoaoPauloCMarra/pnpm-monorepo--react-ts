@@ -1,0 +1,11 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "rimraf ../../dist/web && tsc && vite build"
+  }
+}
