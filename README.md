@@ -3,6 +3,7 @@
 ### Apps
 
 - web - React 18 + Vite + TS
+- server - Simple NodeJs server
 
 ### Packages
 
